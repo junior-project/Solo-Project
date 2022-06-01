@@ -31,7 +31,7 @@ export const signup = async (req, res, next) => {
     }
     const hashPassword = bcrypt.hashSync(password);
 
-    const user = new User({ name, email, password: hashPassword, })
+    const user = new User({ name, email, password: hashPassword,blogs:[]})
 
 
     try {
